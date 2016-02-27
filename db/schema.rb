@@ -11,9 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160227120820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "games", force: :cascade do |t|
+    t.string   "title"
+    t.string   "genre"
+    t.string   "publisher"
+    t.string   "slipcover"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "game_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "rating"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "reviews", ["game_id"], name: "index_reviews_on_game_id", using: :btree
+
+  add_foreign_key "reviews", "games"
 end
