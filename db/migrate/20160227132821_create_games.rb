@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.string :title
       t.string :genre
-      t.string :publisher
+      t.string :developer
       t.string :slipcover
       t.text :description
 
