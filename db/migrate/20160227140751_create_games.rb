@@ -4,6 +4,8 @@ class CreateGames < ActiveRecord::Migration
       t.string :title
       t.string :genre
       t.string :developer
+      t.string :publisher
+      t.date :release_date
       t.string :slipcover
       t.text :description
 
