@@ -5,6 +5,7 @@ RSpec.describe ReviewsController, type: :controller do
 
   let(:valid_attributes) do
     {
+      game: 1,
       name: "Mr. Tests",
       description: "Write rspec tests for the review controller",
       rating: 5
