@@ -6,7 +6,7 @@ class GamesController < ApplicationController
       count: Game.count,
       page: 0
     },
-      games: Game.order(:name)
+      games: Game.order(:release_date)
     }
   end
 

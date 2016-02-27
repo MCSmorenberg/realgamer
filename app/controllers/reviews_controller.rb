@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
         count: @game.reviews.count,
         page: 0
       },
-      reviews: @game.reviews.order(:status, :id)
+      reviews: @game.reviews.order(:id)
     }
   end
 
