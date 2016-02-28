@@ -25,6 +25,15 @@ destiny = Game.create({
   description: "The Guardians are tasked with reviving a celestial being called the Traveler, while journeying to different planets to investigate and destroy the alien threats before humanity is completely wiped out."
   })
 
+forza_6 = Game.create({
+  title: "Forza 6",
+  genre: "Racing",
+  developer: "Turn 10 Studios",
+  publisher: "Microsoft Studios",
+  release_date: DateTime.new(2015, 9, 18),
+  description: "Forza Motorsport 6 is a racing video game developed by Turn 10 Studios and published by Microsoft Studios for the Xbox One. Forza Motorsport 6 features more than 450 cars."
+  })
+
 Review.create([
   {
     name: "Donald Duck",
