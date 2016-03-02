@@ -1,12 +1,14 @@
 class GamesController < ApplicationController
 
   def index
+    games = Game.order(:release_date)
     render json: {
       meta: {
       count: Game.count,
       page: 0
     },
-      games: Game.order(:release_date)
+      games: games.as_json({:include => :reviews, :methods => :average_rating})
+
     }
   end
 
@@ -19,7 +21,7 @@ class GamesController < ApplicationController
         count: game.reviews.count,
         page: 0
       },
-      average_rating: average_rating
+      average_rating: average_rating,
       game: game,
       reviews: reviews
      }
