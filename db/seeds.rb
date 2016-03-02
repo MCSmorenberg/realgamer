@@ -43,13 +43,13 @@ Review.create([
   },
   {
     name: "Stan Marsh",
-    description: "The grafics ar ok though. But this game is just not that good..",
+    description: "The grafics are ok though. But this game is just not that good..",
     rating: 3,
     game: the_witcher_3
   },
   {
     name: "Wouter de Vos",
-    description: "The Witcher 3 may be the best open-world game ever made—at least in terms of quest structure—but it’s held back by clunky controls",
+    description: "The Witcher 3 may be the best open-world game ever made—at least in terms of quest structure—but it’s held back by clunky controls.",
     rating: 4,
     game: the_witcher_3
   },
