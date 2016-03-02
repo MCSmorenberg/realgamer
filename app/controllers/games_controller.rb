@@ -13,11 +13,13 @@ class GamesController < ApplicationController
   def show
     game = Game.find(params[:id])
     reviews = game.reviews
+    average_rating = game.average_rating
     render json: {
       meta: {
         count: game.reviews.count,
         page: 0
       },
+      average_rating: average_rating
       game: game,
       reviews: reviews
      }
