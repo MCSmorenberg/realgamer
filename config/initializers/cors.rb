@@ -1,7 +1,8 @@
 class Realgamer::Application
   config.middleware.insert_before 0,  "Rack::Cors", debug: true, logger: (-> { Rails.logger }) do
      allow do
-       origins 'localhost:3000'
+       origins 'localhost:3000',
+       'supervisor-toad-54271.bitballoon.com'
 
        resource '/cors',
          headers: :any,
