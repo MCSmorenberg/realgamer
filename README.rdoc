@@ -15,6 +15,11 @@
 - rake db:migrate
 - rake db:seed
 
+== Run tests
+
+
+- bundle exec rspec
+
 
 == Find data on the API
 
