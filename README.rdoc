@@ -1,6 +1,4 @@
-== README
-
-== Rails API
+== README Rails API
 
 == App installation
 
